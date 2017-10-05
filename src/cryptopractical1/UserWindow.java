@@ -103,13 +103,23 @@ public class UserWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVerifyCCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerifyCCActionPerformed
-        if(txtCC.getText().length() == 16)
-            lblStatus.setText(Verifier.verifyCC(txtCC.getText()) ? "Status: Valid" : "Status: Invalid");
+        if(txtCC.getText().length() == 10)
+            if(!txtCC.getText().contains("[a-zA-Z ]+"))
+                lblStatus.setText(Verifier.verifyISBN(txtCC.getText()) ? "Status: Valid" : "Status: Invalid");
+            else
+                lblStatus.setText("Status: CC contains invalid characters");
+        else
+            lblStatus.setText("Status: CC invalid length");
     }//GEN-LAST:event_btnVerifyCCActionPerformed
 
     private void btnVerifyISBNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerifyISBNActionPerformed
         if(txtISBN.getText().length() == 10)
-            lblStatus.setText(Verifier.verifyISBN(txtISBN.getText()) ? "Status: Valid" : "Status: Invalid");
+            if(!txtISBN.getText().contains("[a-zA-Z ]+"))
+                lblStatus.setText(Verifier.verifyISBN(txtISBN.getText()) ? "Status: Valid" : "Status: Invalid");
+            else
+                lblStatus.setText("Status: CC contains invalid characters");
+        else
+            lblStatus.setText("Status: ISBN invalid length");
     }//GEN-LAST:event_btnVerifyISBNActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
