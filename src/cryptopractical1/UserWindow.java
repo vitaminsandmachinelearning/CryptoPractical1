@@ -105,7 +105,7 @@ public class UserWindow extends javax.swing.JFrame {
     private void btnVerifyCCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerifyCCActionPerformed
         if(txtCC.getText().length() == 10)
             if(!txtCC.getText().contains("[a-zA-Z ]+"))
-                lblStatus.setText(Verifier.verifyISBN(txtCC.getText()) ? "Status: Valid" : "Status: Invalid");
+                lblStatus.setText(Verifier.verifyISBN(txtCC.getText()) ? "Status: CC valid" : "Status: CC invalid");
             else
                 lblStatus.setText("Status: CC contains invalid characters");
         else
@@ -115,9 +115,9 @@ public class UserWindow extends javax.swing.JFrame {
     private void btnVerifyISBNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerifyISBNActionPerformed
         if(txtISBN.getText().length() == 10)
             if(!txtISBN.getText().contains("[a-zA-Z ]+"))
-                lblStatus.setText(Verifier.verifyISBN(txtISBN.getText()) ? "Status: Valid" : "Status: Invalid");
+                lblStatus.setText(Verifier.verifyISBN(txtISBN.getText()) ? "Status: ISBN valid" : "Status: ISBN invalid");
             else
-                lblStatus.setText("Status: CC contains invalid characters");
+                lblStatus.setText("Status: ISBN contains invalid characters");
         else
             lblStatus.setText("Status: ISBN invalid length");
     }//GEN-LAST:event_btnVerifyISBNActionPerformed
