@@ -20,9 +20,29 @@ public class Verifier {
     
     public static boolean verifyCC(String cc)
     {
+        System.out.println("checking");
         int toCheck = 0;
         for(int i = 0; i < 16; i++)
-                toCheck += i % 2 == 0 ? (Character.getNumericValue(cc.charAt(i)) * 2 >= 10 ? Character.getNumericValue(cc.charAt(i)) * 2 - 9 : Character.getNumericValue(cc.charAt(i)) * 2) : Character.getNumericValue(cc.charAt(i));
+            //toCheck += i % 2 == 0 ? Character.getNumericValue(cc.charAt(i) * 2 >= 10 ? Character.getNumericValue(cc.charAt(i)) * 2 - 9 : Character.getNumericValue(cc.charAt(i)) * 2) : Character.getNumericValue(cc.charAt(i));
+        {
+            if(i % 2 == 0 || i == 0)
+            {
+                if(Character.getNumericValue(cc.charAt(i)) * 2 >= 10)
+                {
+                    toCheck += Character.getNumericValue(cc.charAt(i)) * 2 - 9;
+                }
+                else
+                {
+                    toCheck += Character.getNumericValue(cc.charAt(i)) * 2;
+                }
+            }
+            else
+            {
+                toCheck += Character.getNumericValue(cc.charAt(i));
+            }
+        }
+        System.out.println(toCheck);
         return toCheck % 10 == 0;
     }
 }
+//

@@ -103,9 +103,9 @@ public class UserWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVerifyCCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerifyCCActionPerformed
-        if(txtCC.getText().length() == 10)
+        if(txtCC.getText().length() == 16)
             if(!txtCC.getText().contains("[a-zA-Z ]+"))
-                lblStatus.setText(Verifier.verifyISBN(txtCC.getText()) ? "Status: CC valid" : "Status: CC invalid");
+                lblStatus.setText(Verifier.verifyCC(txtCC.getText()) ? "Status: CC valid" : "Status: CC invalid");
             else
                 lblStatus.setText("Status: CC contains invalid characters");
         else

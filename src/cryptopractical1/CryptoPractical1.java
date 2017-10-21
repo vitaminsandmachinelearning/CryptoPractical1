@@ -2,6 +2,7 @@ package cryptopractical1;
 public class CryptoPractical1 {
     public static void main(String[] args) {
         UserWindow uw = new UserWindow();
+        System.out.println("test");
     }
     
     static int modp(int x, int y, int m)
