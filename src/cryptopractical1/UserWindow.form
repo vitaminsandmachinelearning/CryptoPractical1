@@ -88,7 +88,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblStatus">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Status: Null"/>
+        <Property name="text" type="java.lang.String" value="Status: Please enter a number."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnVerifyISBN">

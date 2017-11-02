@@ -43,7 +43,7 @@ public class UserWindow extends javax.swing.JFrame {
 
         jLabel2.setText("Credit Card");
 
-        lblStatus.setText("Status: Null");
+        lblStatus.setText("Status: Please enter a number.");
 
         btnVerifyISBN.setText("Verify");
         btnVerifyISBN.addActionListener(new java.awt.event.ActionListener() {

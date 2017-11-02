@@ -14,7 +14,12 @@ public class Verifier {
     {
         int toCheck = 0;
         for(int i = 1; i < 11; i++)
-            toCheck += Character.getNumericValue(isbn.charAt(i - 1)) * i;
+        {
+            if(isbn.charAt(i - 1) != 'X' || isbn.charAt(i - 1) != 'x')
+                toCheck += Character.getNumericValue(isbn.charAt(i - 1)) * i;
+            else
+                toCheck += 10 * i;
+        }
         return toCheck % 11 == 0;
     }
     
