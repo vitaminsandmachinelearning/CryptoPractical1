@@ -1,9 +1,11 @@
 package cryptopractical1;
 public class CryptoPractical1 {
     public static void main(String[] args) {
+        //Create and open the user interface
         UserWindow uw = new UserWindow();
-        System.out.println("test");
     }
+    
+    //modular arithmetic functions
     
     static int modp(int x, int y, int m)
     {

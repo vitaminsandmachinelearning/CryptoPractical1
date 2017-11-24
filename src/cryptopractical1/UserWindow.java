@@ -103,8 +103,8 @@ public class UserWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVerifyCCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerifyCCActionPerformed
-        if(txtCC.getText().length() == 16)
-            if(!txtCC.getText().contains("[a-zA-Z ]+"))
+        if(txtCC.getText().length() == 16) //Ensure the length of the string is appropriate
+            if(!txtCC.getText().contains("[a-zA-Z ]+")) //Ensure only appropriate characters are used
                 lblStatus.setText(Verifier.verifyCC(txtCC.getText()) ? "Status: CC valid" : "Status: CC invalid");
             else
                 lblStatus.setText("Status: CC contains invalid characters");
@@ -113,8 +113,8 @@ public class UserWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVerifyCCActionPerformed
 
     private void btnVerifyISBNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerifyISBNActionPerformed
-        if(txtISBN.getText().length() == 10)
-            if(!txtISBN.getText().contains("[a-zA-Z ]+"))
+        if(txtISBN.getText().length() == 10) //Ensure the length of the string is appropriate
+            if(!txtISBN.getText().contains("[a-zA-Z ]+")) //Ensure only appropriate characters are used
                 lblStatus.setText(Verifier.verifyISBN(txtISBN.getText()) ? "Status: ISBN valid" : "Status: ISBN invalid");
             else
                 lblStatus.setText("Status: ISBN contains invalid characters");
